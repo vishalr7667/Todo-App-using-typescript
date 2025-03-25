@@ -1,54 +1,80 @@
-# React + TypeScript + Vite
+# Taskify - Drag & Drop Todo Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive todo application built with React and TypeScript. Features include drag-and-drop functionality, local storage persistence, and a clean, intuitive interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✨ Create and manage todos
+- 🔄 Drag and drop todos between active and completed lists
+- 💾 Automatic local storage persistence
+- 🎨 Modern and responsive design
+- ⚡ Built with React and TypeScript
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Before you begin, ensure you have the following installed:
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/vishalr7667/Todo-App-using-typescript
+cd Todo-App-using-typescript
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm install
 ```
+
+## Running the Application
+
+### Development Mode
+
+To run the application in development mode:
+
+```bash
+npm run dev
+```
+
+This will start the development server, typically at `http://localhost:5173`. Open your browser and navigate to this address to view the application.
+
+### Production Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Technologies Used
+
+- React
+- TypeScript
+- Vite
+- @hello-pangea/dnd (for drag and drop functionality)
+- Tailwind CSS
+
+## Project Structure
+
+```
+taskify/
+├── src/
+│   ├── components/
+│   │   ├── InputField.tsx
+│   │   └── TodoList.tsx
+│   ├── model.ts
+│   └── App.tsx
+├── public/
+├── package.json
+└── README.md
+```
+
