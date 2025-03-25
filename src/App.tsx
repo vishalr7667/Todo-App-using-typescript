@@ -50,13 +50,9 @@ const  App: React.FC = () => {
         completedTodos.splice(result.destination.index, 0, movedItem);
     }
 
-    console.log(activeTodos, completedTodos);
-    
-
     // **🔥 Correct way to update state & localStorage**
     setTodos(() => {
         const updatedTodos = [...activeTodos, ...completedTodos];
-        console.log("updatedtodos",updatedTodos)
         // ✅ Update localStorage AFTER state is updated
         localStorage.setItem("todos", JSON.stringify(updatedTodos));
         return updatedTodos;
